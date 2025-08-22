@@ -1,0 +1,169 @@
+  <!DOCTYPE html>
+  <html lang="pt-br">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="style.css" />
+      <link rel="icon" href="img/fundo.png" type="image/png">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <title>NOBRE BURGUES</title>
+    </head>
+    <body>
+      <form id="pedidoForm">
+        <div class="top-bar">
+          <img src="img/fundo.png" alt="NobreBurgue" />
+        </div>
+        
+        <h2 class="titulo-secao">ℹ️ Preencha com seus dados</h2>
+        <label>Nome e Sobrenome:</label>
+        <input type="text" id="nome" name="nome" placeholder="João Nobre..." required>
+
+        <label>Telefone:</label>
+        <input type="text" id="telefone" name="telefone" placeholder="(85)91234-5678" required>
+
+        <label>Bairro:</label>
+        <input type="text" id="bairro" name="bairro" placeholder="Canta Galo..." required>
+
+        <label>Referência:</label>
+        <input type="text" id="referencia" name="referencia" placeholder="Próximo a curva..." required>
+        </div>
+
+        <h2 class="titulo-secao">🍔 Hambúrguer</h2>
+
+        <div class="item-opcao">
+          <label class="opcao-info">
+            <input type="checkbox" name="item" value="Americano" data-price="8.00"/>
+            <div class="info">
+              <strong>Americano - 8,00 R$</strong>
+              <p>
+                Pão, Carne, Queijo, Presunto, Ovo, Alface, Tomate e Molho
+                especial.
+              </p>
+            </div>
+          </label>
+          <input type="number" class="quantidade" min="1" value="1" data-for="Americano"/>
+        </div>
+
+        <div class="item-opcao">
+          <label class="opcao-info">
+            <input type="checkbox" name="item" value="XBacon" data-price="8.00"/>
+            <div class="info">
+              <strong>X-Bacon - 8,00 R$</strong>
+              <p>
+                Pão, Carne, Queijo, Bacon, Alface, Tomate e Molho
+                especial.
+              </p>
+            </div>
+          </label>
+          <input type="number" class="quantidade" min="1" value="1" data-for="XBacon"/>
+        </div>
+
+        <div class="item-opcao">
+          <label class="opcao-info">
+            <input type="checkbox" name="item" value="XCalabresa" data-price="8.00"/>
+            <div class="info">
+              <strong>X-Calabresa - 8,00 R$</strong>
+              <p>
+                Pão, Carne, Queijo, Calabresa, Alface, Tomate e Molho
+                especial.
+              </p>
+            </div>
+          </label>
+          <input type="number" class="quantidade" min="1" value="1" data-for="XCalabresa"/>
+        </div>
+
+        <div class="item-opcao">
+          <label class="opcao-info">
+            <input type="checkbox" name="item" value="Xnobre" data-price="12.00"/>
+            <div class="info">
+              <strong>X-Nobre - 12,00 R$</strong>
+              <p>
+                Pão, Carne, Queijo, Ovo, Bacon, Calabresa, Frango, Alface, Tomate e Molho
+                especial.
+              </p>
+            </div>
+          </label>
+          <input type="number" class="quantidade" min="1" value="1" data-for="Xnobre"/>
+        </div>
+
+        <div class="item-opcao">
+          <label class="opcao-info">
+            <input type="checkbox" name="item" value="XRealeza" data-price="15.00"/>
+            <div class="info">
+              <strong>X-Realeza - 15,00 R$</strong>
+              <p>
+                Pão Árabe, Carne, Queijo, Ovo, Bacon, Calabresa, Frango, Alface, Tomate e Molho
+                especial.
+              </p>
+            </div>
+          </label>
+          <input type="number" class="quantidade" min="1" value="1" data-for="XRealeza"/>
+        </div>
+
+        <h2 class="titulo-secao">🍟 Batata Frita</h2>
+
+        <div class="item-opcao">
+          <label class="opcao-info">
+            <input type="checkbox" name="item" value="Batata Frita Pequena Normal" data-price="6.00" />
+            <strong>Pequena - 6,00 R$</strong>
+          </label>
+          <input type="number" class="quantidade" min="1" value="1" data-for="Batata Frita Pequena Normal"/>
+        </div>
+
+        <div class="item-opcao">
+          <label class="opcao-info">
+            <input type="checkbox" name="item" value="Batata Frita Normal Grande" data-price="12.00" />
+            <strong>Grande - 12,00 R$</strong>
+          </label>
+          <input type="number" class="quantidade" min="1" value="1" data-for="Batata Frita Normal Grande" />
+        </div>
+
+        <h2 class="titulo-secao">🍟 Batata Frita - Turbinada</h2>
+
+        <div class="item-opcao">
+          <label class="opcao-info">
+            <input type ="checkbox" name="item" value="Batata Frita Turbinada Pequena" data-price="10.00"/>
+            <strong>Pequena - 10,00 R$</strong>
+          </label>
+          <input type="number" class="quantidade" min="1" value="1" data-for="Batata Frita Turbinada Pequena"/>
+        </div>
+
+        <div class="item-opcao">
+          <label class="opcao-info">
+            <input type="checkbox" name="item" value="Batata Frita Turbinada Grande" data-price="15.00" />
+            <strong>Grande - 15,00 R$</strong>
+          </label>
+          <input type="number" class="quantidade" min="1" value="1" data-for="Batata Frita Turbinada Grande"/>
+        </div>
+
+        <div class="campo-descricao">
+          <label for="descricao">Observações / Detalhes do Pedido:</label>
+          <textarea
+            id="descricao"
+            name="descricao"
+            placeholder="Ex: Sem alface, sem presunto..."
+            rows="4"
+          ></textarea>
+        </div>
+
+        <button type="button" class="btn-add-carrinho" onclick="addSelectedToCart()">Adicionar o carrinho</button>
+        <div id="cart-toggle">🛒</div>
+
+        <div id="cart-drawer" class="cart-drawer">
+      <div class="drawer-header">
+        <h3>Meu Carrinho</h3>
+        <span id="close-cart">✖</span>
+      </div>
+      <ul id="cart-items"></ul>
+  <div id="cart-obs" style="display:none; margin-top:10px;"></div>
+      <div class="drawer-footer">
+        <p><b>Total: R$ <span id="cart-total">0.00</span></b></p>
+        <button type="button" class="btn-finalizar" onclick="finalizeOrder()">Finalizar Pedido</button>
+      </div>
+    </div>
+
+      </form>
+
+      <script src="index.js"></script>
+    </body>
+  </html>
