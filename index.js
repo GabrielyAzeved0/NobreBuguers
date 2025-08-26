@@ -115,7 +115,8 @@ async function finalizeOrder() {
 
 *Cliente:* ${nome}
 *Telefone:* ${telefone}
-*Referência:* ${referencia}, ${bairro}
+*Bairro:* ${bairro}
+*Referência:* ${referencia}
 *Data/Hora do pedido:* ${dataHora}
 
 *Itens:*
@@ -127,7 +128,7 @@ ${cart.map(i => `${i.quantidade}x ${i.name} - R$${(i.price * i.quantidade).toFix
 *PEDIDOS SÓ SERÁ CONFIRMADO E ENTREGUE APÓS COMPROVANTE.*
 `;
   const encodedMsg = encodeURIComponent(msg);
-  const numero = '5585992032219';
+  const numero = '5585992307109';
   window.open(`https://wa.me/${numero}?text=${encodedMsg}`, '_blank');
 
   const sheetUrl = 'https://script.google.com/macros/s/AKfycbzYwEIfc5BaT3BSBtZ4Xccmq1Y3Xomxlb6ZisLLo_0HWeyx_Q7Ur4rGEdO3RGmFPeU7/exec';
