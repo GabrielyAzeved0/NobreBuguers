@@ -111,7 +111,7 @@ async function finalizeOrder() {
   const dataHora = agora.toLocaleString(); 
 
   const msg = `
-*Pedido Nobre Burgues* 
+*Pedido Nobre Burguer* 
 
 *Cliente:* ${nome}
 *Telefone:* ${telefone}

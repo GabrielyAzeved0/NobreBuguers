@@ -124,6 +124,14 @@ div {
   color: #777;
   margin-top: 2px;
 }
+
+.item-opcao .info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;           /* garante que o texto e os radios fiquem no mesmo alinhamento */
+  box-sizing: border-box;
+}
+
 .quantidade {
   width: 42px;
   height: 30px;
