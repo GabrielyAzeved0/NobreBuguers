@@ -105,7 +105,6 @@ async function finalizeOrder() {
   if (pedidosData.data !== hoje) pedidosData = { data: hoje, numero: 0 };
   pedidosData.numero += 1;
   localStorage.setItem('pedidosData', JSON.stringify(pedidosData));
-  const numeroPedido = pedidosData.numero; 
 
   const agora = new Date();
   const dataHora = agora.toLocaleString(); 
@@ -130,25 +129,6 @@ ${cart.map(i => `${i.quantidade}x ${i.name} - R$${(i.price * i.quantidade).toFix
   const encodedMsg = encodeURIComponent(msg);
   const numero = '5585992307109';
   window.open(`https://wa.me/${numero}?text=${encodedMsg}`, '_blank');
-
-  const sheetUrl = 'https://script.google.com/macros/s/AKfycbzYwEIfc5BaT3BSBtZ4Xccmq1Y3Xomxlb6ZisLLo_0HWeyx_Q7Ur4rGEdO3RGmFPeU7/exec';
-  await fetch(sheetUrl, {
-    method: 'POST',
-    body: JSON.stringify({
-      numeroPedido,
-      nome,
-      telefone,
-      bairro,
-      referencia,
-      itens: cart.map(i => ({nome: i.name, quantidade: i.quantidade, preco: i.price})),
-      total: total.toFixed(2),
-      observacao,
-      dataHora
-    }),
-    headers: { 'Content-Type': 'application/json' }
-  }).then(res => console.log("Pedido enviado para planilha com sucesso!", res))
-    .catch(err => console.error("Erro ao enviar pedido para planilha:", err));
-
   cart.length = 0;
   localStorage.removeItem("carrinho");
   document.getElementById('descricao').value = '';
